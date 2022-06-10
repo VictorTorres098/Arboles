@@ -4,9 +4,9 @@ import arbolesPackage.AB.Nodo;
 
 public class ABB <T extends Comparable<T>> {
 	
-	protected Nodo<T> raiz;
+	Nodo<T> raiz;
 	
-	public class Nodo<T>{ //clase interna
+	protected class Nodo<T>{ //clase interna
 		
 		private T info;
 		private Nodo<T> hijoIzq;
@@ -82,7 +82,10 @@ public class ABB <T extends Comparable<T>> {
 		}
 	}
 	
-	public void eliminar (T valor) {
+	protected Nodo<T> eliminar(T elem, Nodo<T> nodo) {
+		if(nodo == null) {
+			return null
+		}
 	}
 	
 //	public boolean buscar( T valor) {
